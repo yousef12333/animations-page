@@ -1,0 +1,10 @@
+<div class="container">
+  <button (click)="addListItem()" class="button">Add</button>
+  <button (click)="removeListItem()" class="button">Delete</button>
+  <ul class="list">
+    <li *ngFor="let item of list" class="list__item" [@fadeInOut]>
+      <h3 class="title">{{ item.title }}</h3>
+      <p class="body">{{ item.body }}</p>
+    </li>
+  </ul>
+</div>
