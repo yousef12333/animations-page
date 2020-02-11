@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  margin: 0 auto 0 0;
+  flex-grow: 0.5;
+
+  &__link {
+    padding: 20px 40px;
+    background-color: #364f6b;
+    color: #43dde6;
+  }
+}
+
+.example {
+  flex-grow: 1.5;
+}
