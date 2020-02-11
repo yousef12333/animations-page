@@ -6,7 +6,7 @@ import {
   transition,
   animate
 } from "@angular/animations";
-import { FADE_IN_OUT_ANIMATION } from "../../animations/fadeInOut";
+import { FADE_IN_OUT_ANIMATION } from "../../animations/basic/fadeInOut";
 
 @Component({
   selector: "app-fade-in-out",

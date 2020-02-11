@@ -6,9 +6,10 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { FadeInOutComponent } from "./animation/pages/fade-in-out/fade-in-out.component";
 import { LightSpeedInComponent } from "./animation/pages/light-speed-in/light-speed-in.component";
+import { PulseComponent } from './animation/pages/pulse/pulse.component';
 
 @NgModule({
-  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent],
+  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent, PulseComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -16,10 +17,11 @@ import { LightSpeedInComponent } from "./animation/pages/light-speed-in/light-sp
       { path: "fade-in-out", component: FadeInOutComponent },
       { path: "", redirectTo: "fade-in-out", pathMatch: "full" },
       { path: "light-speed-in", component: LightSpeedInComponent },
+      { path: "pulse", component: PulseComponent },
       { path: "**", redirectTo: "fade-in-out" }
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

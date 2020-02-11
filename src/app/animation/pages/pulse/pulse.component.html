@@ -1,0 +1,5 @@
+<div class="container">
+  <h2 class="animation-name">{{ animationName }}</h2>
+  <button (click)="toggleAnimation()">Pulse</button>
+  <div [@pulse]="pulseState" class="target"></div>
+</div>

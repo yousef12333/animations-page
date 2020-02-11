@@ -2,10 +2,11 @@
   height: 100%;
   width: 100%;
   margin: auto;
+  text-align: center;
 
   .target {
     height: 300px;
-    opacity: 0;
-    background-color: red;
+    background-color: blue;
+    transform: scale3d(1, 1, 1);
   }
 }

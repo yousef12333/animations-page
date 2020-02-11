@@ -7,13 +7,13 @@ import {
   keyframes,
   animate
 } from "@angular/animations";
-import { LIGHT_SPEED_IN } from "../../animations/lightSpeedIn";
+import { LIGHT_SPEED_IN_ANIMATION } from "../../animations/basic/lightSpeedIn";
 
 @Component({
   selector: "app-light-speed-in",
   templateUrl: "./light-speed-in.component.html",
   styleUrls: ["./light-speed-in.component.scss"],
-  animations: [LIGHT_SPEED_IN]
+  animations: [LIGHT_SPEED_IN_ANIMATION]
 })
 export class LightSpeedInComponent implements OnInit {
   animationName = "Light Speed In";

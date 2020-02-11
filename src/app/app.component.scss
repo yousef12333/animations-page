@@ -30,10 +30,10 @@ $border-thick: 5px solid map-get($colors, dark-gray);
   }
 
   .sidelist__items {
-    border-bottom: $border-thin;
     .sidelist__item {
       padding: 20px 20px;
       height: 30px;
+      border-bottom: $border-thin;
       transition: 0.3s;
 
       &:hover {
