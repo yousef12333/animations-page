@@ -4,12 +4,15 @@
   </header>
   <div class="sidelist__items">
     <div class="sidelist__item">
-      <a class="item__link">Fade In-Out</a>
+      <a class="item__link" [routerLink]="['/fade-in-out']">Fade In-Out</a>
+    </div>
+    <div class="sidelist__item">
+      <a class="item__link" [routerLink]="['/light-speed-in']"
+        >Light Speed In</a
+      >
     </div>
   </div>
 </aside>
 <div class="animation__example">
-  <!-- <app-fade-in-out></app-fade-in-out> -->
-
-  <app-light-speed-in></app-light-speed-in>
+  <router-outlet></router-outlet>
 </div>

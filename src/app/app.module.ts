@@ -13,10 +13,10 @@ import { LightSpeedInComponent } from "./animation/pages/light-speed-in/light-sp
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: "", redirectTo: "/fade-in-out", pathMatch: "full" },
       { path: "fade-in-out", component: FadeInOutComponent },
+      { path: "", redirectTo: "fade-in-out", pathMatch: "full" },
       { path: "light-speed-in", component: LightSpeedInComponent },
-      { path: "**", redirectTo: "/fade-in-out" }
+      { path: "**", redirectTo: "fade-in-out" }
     ])
   ],
   providers: [],
