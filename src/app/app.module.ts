@@ -6,20 +6,23 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { FadeInOutComponent } from "./animation/pages/fade-in-out/fade-in-out.component";
 import { LightSpeedInComponent } from "./animation/pages/light-speed-in/light-speed-in.component";
-import { PulseComponent } from './animation/pages/pulse/pulse.component';
+
+import { AttentionSeekersComponent } from './animation/pages/attention-seekers/attention-seekers.component';
+import { AttentionSeekersModule } from './animation/pages/attention-seekers/attention-seekers.module';
 
 @NgModule({
-  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent, PulseComponent],
+  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent, AttentionSeekersComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
+      { path: "attention-seekers", component: AttentionSeekersComponent },
       { path: "fade-in-out", component: FadeInOutComponent },
       { path: "", redirectTo: "fade-in-out", pathMatch: "full" },
       { path: "light-speed-in", component: LightSpeedInComponent },
-      { path: "pulse", component: PulseComponent },
       { path: "**", redirectTo: "fade-in-out" }
-    ])
+    ]),
+    AttentionSeekersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
