@@ -14,4 +14,5 @@ import {
 })
 export class AppComponent {
   pageTitle = "Angular Animations";
+  animationName = "Fade In-Out";
 }

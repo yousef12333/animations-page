@@ -1,10 +1,16 @@
-<header id="header">
-  <h1>{{ pageTitle }}</h1>
-</header>
-<nav id="navbar">
-  <a class="navbar__link">Fade In-Out</a>
-</nav>
-<div class="example">
+<aside class="sidelist">
+  <header class="header">
+    <h1 class="header__text">{{ pageTitle }}</h1>
+  </header>
+  <div class="sidelist__items">
+    <div class="sidelist__item">
+      <a class="item__link">{{ animationName }}</a>
+    </div>
+  </div>
+</aside>
+<div class="animation__example">
+  <h2 class="animationName">{{ animationName }}</h2>
   <!-- <app-fade-in-out></app-fade-in-out> -->
+
   <app-light-speed-in></app-light-speed-in>
 </div>
