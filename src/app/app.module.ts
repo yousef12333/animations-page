@@ -9,9 +9,10 @@ import { LightSpeedInComponent } from "./animation/pages/light-speed-in/light-sp
 
 import { AttentionSeekersComponent } from './animation/pages/attention-seekers/attention-seekers.component';
 import { AttentionSeekersModule } from './animation/pages/attention-seekers/attention-seekers.module';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent, AttentionSeekersComponent],
+  declarations: [AppComponent, FadeInOutComponent, LightSpeedInComponent, AttentionSeekersComponent, HeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attention-seekers.component.scss']
 })
 export class AttentionSeekersComponent implements OnInit {
-
+  pageHeader: string = "Attention Seekers"
   constructor() { }
 
   ngOnInit(): void {
