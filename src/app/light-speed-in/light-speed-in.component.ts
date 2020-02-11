@@ -7,12 +7,14 @@ import {
   keyframes,
   animate
 } from "@angular/animations";
+import { FADE_IN_OUT_ANIMATION } from "../animations";
 
 @Component({
   selector: "app-light-speed-in",
   templateUrl: "./light-speed-in.component.html",
   styleUrls: ["./light-speed-in.component.scss"],
   animations: [
+    FADE_IN_OUT_ANIMATION,
     trigger("lightSpeedIn", [
       transition(
         "void => *",
@@ -34,7 +36,9 @@ import {
   ]
 })
 export class LightSpeedInComponent implements OnInit {
+  animationName = "Light Speed In";
   isActive = false;
+  isShown = "out";
   constructor() {}
 
   activateAnimation() {
@@ -42,4 +46,8 @@ export class LightSpeedInComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  toggleFade() {
+    this.isShown = this.isShown === "out" ? "in" : "out";
+  }
 }

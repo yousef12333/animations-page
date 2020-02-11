@@ -1,2 +1,13 @@
+<h2 class="animationName">{{ animationName }}</h2>
 <button (click)="activateAnimation()">Click me!</button>
 <div *ngIf="isActive" [@lightSpeedIn] class="target"></div>
+
+<hr />
+
+<h2>Fade in/ out</h2>
+
+<button (click)="toggleFade()">{{ isShown }}</button>
+<div
+  style="background-color: blue; height: 300px;"
+  [@fadeInOutTrigger]="isShown"
+></div>

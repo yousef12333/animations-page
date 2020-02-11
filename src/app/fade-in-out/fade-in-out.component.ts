@@ -32,6 +32,7 @@ import {
 })
 export class FadeInOutComponent implements OnInit {
   list = [];
+  animationName = "Fade In-Out";
   constructor() {}
 
   ngOnInit(): void {}
