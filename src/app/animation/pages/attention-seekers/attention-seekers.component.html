@@ -1,7 +1,8 @@
 <div class="container">
   <app-header [pageHeader]="pageHeader"></app-header>
   <nav class="controls">
-    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Bounce</a>
+    <a [routerLink]="['bounce']" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'"
+      class="controls__link">Bounce</a>
     <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Flash</a>
     <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Headshake</a>
     <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Heartbeat</a>

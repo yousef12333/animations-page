@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 
 import { AttentionSeekersRoutingModule } from './attention-seekers-routing.module';
+import { BounceComponent } from './components/bounce/bounce.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [BounceComponent],
   imports: [
     CommonModule,
     AttentionSeekersRoutingModule

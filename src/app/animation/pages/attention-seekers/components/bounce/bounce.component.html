@@ -1,0 +1,5 @@
+<div class="container">
+  <h2 class="animation-name">{{ animationName }}</h2>
+  <button (click)="toggleAnimation()">Bounce</button>
+  <div [@bounce]="bounceState" class="target"></div>
+</div>
