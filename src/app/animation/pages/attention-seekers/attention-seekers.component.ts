@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION } from "./attention-seeker-animations";
+import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION, SHAKE_ANIMATION } from "./attention-seeker-animations";
 import { trigger, useAnimation, transition } from '@angular/animations';
 
 @Component({
@@ -8,7 +8,8 @@ import { trigger, useAnimation, transition } from '@angular/animations';
   animations: [
     trigger("bounce", [transition("off <=> on", useAnimation(BOUNCE_ANIMATION))]),
     trigger("pulse", [transition("off <=> on", useAnimation(PULSE_ANIMATION))]),
-    trigger("flash", [transition("off <=> on", useAnimation(FLASH_ANIMATION))])
+    trigger("flash", [transition("off <=> on", useAnimation(FLASH_ANIMATION))]),
+    trigger("shake", [transition("off <=> on", useAnimation(SHAKE_ANIMATION))])
   ]
 })
 export class AttentionSeekersComponent implements OnInit {
@@ -16,7 +17,6 @@ export class AttentionSeekersComponent implements OnInit {
   // animation states
   bounce = "off";
   flash = "off";
-  headshake = "off";
   heartbeat = "off";
   jello = "off";
   pulse = "off";
@@ -30,7 +30,6 @@ export class AttentionSeekersComponent implements OnInit {
   animations = [
     "bounce",
     "flash",
-    "headshake",
     "heartbeat",
     "jello",
     "pulse",
@@ -47,7 +46,7 @@ export class AttentionSeekersComponent implements OnInit {
   }
 
   toggleAnimation(animationName: string) {
-    console.log(animationName)
+    console.log(this[animationName])
     this[animationName] = this[animationName] === "off" ? "on" : "off"
   }
 

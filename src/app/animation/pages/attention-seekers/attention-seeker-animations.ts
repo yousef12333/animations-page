@@ -49,7 +49,7 @@ export const BOUNCE_ANIMATION = animation([
 ], { params: { time: DEFAULT_TIMIMG } })
 
 export const FLASH_ANIMATION = animation([
-  animate("1s", keyframes([
+  animate("{{ time }}", keyframes([
     style({
       opacity: "0", offset: 0.25
     }),
@@ -65,3 +65,18 @@ export const FLASH_ANIMATION = animation([
   ]))
 ], { params: { time: DEFAULT_TIMIMG } })
 
+export const SHAKE_ANIMATION = animation([
+  animate("{{ time }}", keyframes([
+    style({ transform: 'translate3d(0, 0, 0)', offset: 0 }),
+    style({ transform: "translate3d(-10px, 0, 0)", offset: 0.1 }),
+    style({ transform: "translate3d(10px, 0, 0)", offset: 0.2 }),
+    style({ transform: "translate3d(-10px, 0, 0)", offset: 0.3 }),
+    style({ transform: "translate3d(10px, 0, 0)", offset: 0.4 }),
+    style({ transform: "translate3d(-10px, 0, 0)", offset: 0.5 }),
+    style({ transform: "translate3d(10px, 0, 0)", offset: 0.6 }),
+    style({ transform: "translate3d(-10px, 0, 0)", offset: 0.7 }),
+    style({ transform: "translate3d(10px, 0, 0)", offset: 0.8 }),
+    style({ transform: "translate3d(-10px, 0, 0)", offset: 0.9 }),
+    style({ transform: "translate3d(0, 0, 0)", offset: 1 }),
+  ]))
+], { params: { time: DEFAULT_TIMIMG } })
