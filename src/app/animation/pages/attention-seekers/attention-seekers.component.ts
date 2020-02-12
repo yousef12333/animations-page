@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION } from "./attention-seekers";
+import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION } from "./attention-seeker-animations";
 import { trigger, useAnimation, transition } from '@angular/animations';
 
 @Component({
