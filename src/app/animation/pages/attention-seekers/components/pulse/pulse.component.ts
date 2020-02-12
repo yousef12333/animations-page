@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PULSE_ANIMATION } from "../../animations/basic/pulse";
+import { PULSE_ANIMATION } from "../../../../animations/basic/pulse";
 
 @Component({
   templateUrl: './pulse.component.html',

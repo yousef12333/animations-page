@@ -1,0 +1,49 @@
+@use "../../../../styles/variables";
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  .controls {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    &__link {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid #000;
+      padding: 5px 10px;
+      margin: 20px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: map-get(variables.$colors, purple);
+        color: white;
+      }
+    }
+  }
+}
+
+.example {
+  margin-top: 80px;
+}
+
+.is-active{
+  background-color: map-get(variables.$colors, purple);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1)
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

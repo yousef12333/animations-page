@@ -1,0 +1,13 @@
+$font-stack: "Lemonada", cursive;
+$colors: (
+  // color map
+  yellow: #f4fa9c,
+  pink: #f469a9,
+  purple: #ba53de,
+  blue: #88bef5,
+  dark-gray: rgba(0, 0, 0, 0.6),
+  light-gray: rgba(0, 0, 0, 0.387)
+);
+
+$border-thin: 2px solid map-get($colors, light-gray);
+$border-thick: 5px solid map-get($colors, dark-gray);

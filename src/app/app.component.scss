@@ -1,15 +1,4 @@
-$colors: (
-  // color map
-    yellow: #f4fa9c,
-  pink: #f469a9,
-  purple: #ba53de,
-  blue: #88bef5,
-  dark-gray: rgba(0, 0, 0, 0.6),
-  light-gray: rgba(0, 0, 0, 0.387)
-);
-
-$border-thin: 2px solid map-get($colors, light-gray);
-$border-thick: 5px solid map-get($colors, dark-gray);
+@use "../styles/variables";
 
 :host {
   display: flex;
@@ -21,11 +10,11 @@ $border-thick: 5px solid map-get($colors, dark-gray);
   margin: 0;
   flex-grow: 0.1;
   height: 100%;
-  background-color: map-get($colors, yellow);
-  border-right: $border-thick;
+  background-color: map-get(variables.$colors, yellow);
+  border-right: variables.$border-thick;
 
   .header {
-    border-bottom: $border-thick;
+    border-bottom: variables.$border-thick;
     text-align: center;
   }
 
@@ -33,11 +22,11 @@ $border-thick: 5px solid map-get($colors, dark-gray);
     .sidelist__item {
       padding: 20px 20px;
       height: 30px;
-      border-bottom: $border-thin;
+      border-bottom: variables.$border-thin;
       transition: 0.3s;
 
       &:hover {
-        background-color: map-get($colors, pink);
+        background-color: map-get(variables.$colors, pink);
       }
 
       .item__link {
@@ -53,10 +42,10 @@ $border-thick: 5px solid map-get($colors, dark-gray);
   flex-grow: 1.5;
   align-self: flex-start;
   margin: 0 30%;
-  width: 300px;
+  width: 600px;
   height: 300px;
 }
 
 .active {
-  background-color: map-get($colors, purple);
+  background-color: map-get(variables.$colors, purple);
 }

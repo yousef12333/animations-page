@@ -1,4 +1,21 @@
 <div class="container">
   <app-header [pageHeader]="pageHeader"></app-header>
+  <nav class="controls">
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Bounce</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Flash</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Headshake</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Heartbeat</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Jello</a>
+    <a [routerLink]="['pulse']" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'"
+      class="controls__link">Pulse</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Rubberband</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Shake</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Swing</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Tada</a>
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'is-active'" class="controls__link">Wobble</a>
+  </nav>
+</div>
 
+<div class="example">
+  <router-outlet></router-outlet>
 </div>

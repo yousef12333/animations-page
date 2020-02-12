@@ -16,14 +16,14 @@ import { HeaderComponent } from './shared/components/header/header.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AttentionSeekersModule,
     RouterModule.forRoot([
-      { path: "attention-seekers", component: AttentionSeekersComponent },
       { path: "fade-in-out", component: FadeInOutComponent },
       { path: "", redirectTo: "fade-in-out", pathMatch: "full" },
       { path: "light-speed-in", component: LightSpeedInComponent },
       { path: "**", redirectTo: "fade-in-out" }
-    ]),
-    AttentionSeekersModule
+    ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]
