@@ -1,10 +1,10 @@
 import { animation, state, style, animate, keyframes } from "@angular/animations";
 
-const DEFAULT_TIMIMG = 1;
+const DEFAULT_TIMIMG = "1s";
 
 export const PULSE_ANIMATION = animation([
   animate("{{ time }}", keyframes([
-    style({ transform: "scale3d(1.05, 1.05, 1.05)", offset: "0.5" }),
+    style({ transform: "scale3d(1.2, 1.2, 1.2)", offset: "0.5" }),
     style({ transform: "scale3d(1, 1, 1)", offset: "1" })
   ]))
 ], { params: { time: DEFAULT_TIMIMG } }
