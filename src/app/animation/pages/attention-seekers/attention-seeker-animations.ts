@@ -80,3 +80,12 @@ export const SHAKE_ANIMATION = animation([
     style({ transform: "translate3d(0, 0, 0)", offset: 1 }),
   ]))
 ], { params: { time: DEFAULT_TIMIMG } })
+
+export const HEARTBEAT_ANIMATION =
+  animation([animate("{{ time }}", keyframes([
+    style({ transform: "scale(1)", offset: 0 }),
+    style({ transform: "scale(1.3)", offset: 0.14 }),
+    style({ transform: "scale(1)", offset: 0.28 }),
+    style({ transform: "scale(1.3)", offset: 0.42 }),
+    style({ transform: "scale(1)", offset: 0.70 })
+  ]))], { params: { time: DEFAULT_TIMIMG } })

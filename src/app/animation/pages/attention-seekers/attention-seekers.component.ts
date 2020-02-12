@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION, SHAKE_ANIMATION } from "./attention-seeker-animations";
+import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION, SHAKE_ANIMATION, HEARTBEAT_ANIMATION } from "./attention-seeker-animations";
 import { trigger, useAnimation, transition } from '@angular/animations';
 
 @Component({
@@ -9,7 +9,8 @@ import { trigger, useAnimation, transition } from '@angular/animations';
     trigger("bounce", [transition("off <=> on", useAnimation(BOUNCE_ANIMATION))]),
     trigger("pulse", [transition("off <=> on", useAnimation(PULSE_ANIMATION))]),
     trigger("flash", [transition("off <=> on", useAnimation(FLASH_ANIMATION))]),
-    trigger("shake", [transition("off <=> on", useAnimation(SHAKE_ANIMATION))])
+    trigger("shake", [transition("off <=> on", useAnimation(SHAKE_ANIMATION))]),
+    trigger("heartbeat", [transition("off <=> on", useAnimation(HEARTBEAT_ANIMATION))])
   ]
 })
 export class AttentionSeekersComponent implements OnInit {

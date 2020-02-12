@@ -4,5 +4,6 @@
     <button *ngFor="let animation of animations" class="animation-button"
       (click)="toggleAnimation(animation)">{{ animation }}</button>
   </div>
-  <div class="target" [@bounce]="bounce" [@pulse]="pulse" [@flash]="flash" [@shake]="shake"></div>
+  <div class="target" [@bounce]="bounce" [@pulse]="pulse" [@flash]="flash" [@shake]="shake" [@heartbeat]="heartbeat">
+  </div>
 </div>
