@@ -5,16 +5,18 @@ import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
 
-import { AttentionSeekersComponent } from './animation/pages/attention-seekers/attention-seekers.component';
+import { AttentionSeekersComponent } from './feature/animation/pages/attention-seekers/attention-seekers.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { FadingEntrancesComponent } from './feature/animation/pages/fading-entrances/fading-entrances.component';
 
 @NgModule({
-  declarations: [AppComponent, AttentionSeekersComponent, HeaderComponent],
+  declarations: [AppComponent, AttentionSeekersComponent, HeaderComponent, FadingEntrancesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: "attention-seekers", component: AttentionSeekersComponent }
+      { path: "attention-seekers", component: AttentionSeekersComponent },
+      { path: "fading-entrances", component: FadingEntrancesComponent }
     ])
 
   ],

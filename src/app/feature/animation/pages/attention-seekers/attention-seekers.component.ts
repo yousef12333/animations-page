@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION, SHAKE_ANIMATION, HEARTBEAT_ANIMATION, JELLO_ANIMATION } from "./attention-seeker-animations";
+import { PULSE_ANIMATION, BOUNCE_ANIMATION, FLASH_ANIMATION, SHAKE_ANIMATION, HEARTBEAT_ANIMATION, JELLO_ANIMATION } from "../../animations/attention-seeker-animations";
 import { trigger, useAnimation, transition } from '@angular/animations';
 
 @Component({
@@ -15,7 +15,7 @@ import { trigger, useAnimation, transition } from '@angular/animations';
   ]
 })
 export class AttentionSeekersComponent implements OnInit {
-  pageHeader: string = "Attention Seekers";
+  pageHeader = "Attention Seekers";
   // animation states
   bounce = "off";
   flash = "off";
