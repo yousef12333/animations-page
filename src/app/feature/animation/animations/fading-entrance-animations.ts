@@ -30,4 +30,12 @@ export function fadeInY(startY, endY) {
 }
 
 export const FADE_IN_ANIMATION = fadeInX(0, 0);
-export const FADE_IN_DOWN_ANIMATION = fadeInY("100%", 0);
+export const FADE_IN_DOWN_ANIMATION = fadeInY("-100%", 0);
+export const FADE_IN_DOWN_BIG_ANIMATION = fadeInY("-2000px", 0);
+export const FADE_IN_LEFT_ANIMATION = fadeInX("-100%", 0);
+export const FADE_IN_LEFT_BIG_ANIMATION = fadeInX("-2000px", 0);
+export const FADE_IN_RIGHT_ANIMATION = fadeInX("100%", 0);
+export const FADE_IN_RIGHT_BIG_ANIMATION = fadeInX("2000px", 0);
+export const FADE_IN_UP_ANIMATION = fadeInY("100%", 0);
+export const FADE_IN_UP_BIG_ANIMATION = fadeInY("2000px", 0);
+
