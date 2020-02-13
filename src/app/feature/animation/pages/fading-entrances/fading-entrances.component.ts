@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FADE_IN_ANIMATION } from '../../animations/fading-entrance-animations';
+import { FADE_IN_ANIMATION, FADE_IN_DOWN_ANIMATION } from '../../animations/fading-entrance-animations';
 import { trigger, useAnimation, transition } from '@angular/animations';
 
 @Component({
   templateUrl: './fading-entrances.component.html',
   styleUrls: ['./fading-entrances.component.scss'],
   animations: [
-    trigger("fadeIn", [transition("off <=> on", useAnimation(FADE_IN_ANIMATION))])
+    trigger("fadeIn", [transition("off <=> on", useAnimation(FADE_IN_ANIMATION))]),
+    trigger("fadeInDown", [transition("off <=> on", useAnimation(FADE_IN_DOWN_ANIMATION))])
   ]
 })
 export class FadingEntrancesComponent implements OnInit {

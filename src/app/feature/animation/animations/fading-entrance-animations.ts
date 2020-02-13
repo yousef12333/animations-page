@@ -13,4 +13,21 @@ export function fadeInX(startX, endX) {
   )
 }
 
+export function fadeInY(startY, endY) {
+  return animation(
+    animate("{{ time }}", keyframes([
+      style({
+        opacity: "0",
+        transform: "translate3d(0, {{ startY }}, 0)"
+      }),
+      style({
+        opacity: "1",
+        transform: "translate3d(0, {{ endY }}, 0)"
+      })
+    ])),
+    { params: { time: DEFAULT_TIME, startY, endY } }
+  )
+}
+
 export const FADE_IN_ANIMATION = fadeInX(0, 0);
+export const FADE_IN_DOWN_ANIMATION = fadeInY("100%", 0);

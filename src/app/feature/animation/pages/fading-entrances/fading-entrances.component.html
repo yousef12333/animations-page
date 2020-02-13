@@ -4,6 +4,6 @@
     <button *ngFor="let animation of animations" class="animation-button"
       (click)="toggleAnimation(animation)">{{ animation }}</button>
   </div>
-  <div class="target" [@fadeIn]="fadeIn">
+  <div class="target" [@fadeIn]="fadeIn" [@fadeInDown]="fadeInDown">
   </div>
 </div>
