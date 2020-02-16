@@ -8,14 +8,14 @@ import {
   useAnimation
 } from "@angular/animations";
 import { RouterOutlet } from '@angular/router';
-import { FADE_IN_ANIMATION } from "./feature/animation/animations/fading-entrance-animations";
+import { ROUTER_ANIMATIONS } from "./feature/animation/animations/route-animations";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
   animations: [
-    trigger("fadeIn", [transition("* <=> *", useAnimation(FADE_IN_ANIMATION))])
+    ROUTER_ANIMATIONS
   ]
 })
 export class AppComponent {
@@ -23,8 +23,7 @@ export class AppComponent {
   animationName = "Fade In-Out";
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData
-
-    // && outlet.activatedRouteData['animation']
+    console.log(outlet.activatedRouteData);
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }

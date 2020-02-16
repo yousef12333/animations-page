@@ -15,8 +15,8 @@ import { FadingEntrancesComponent } from './feature/animation/pages/fading-entra
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: "attention-seekers", component: AttentionSeekersComponent },
-      { path: "fading-entrances", component: FadingEntrancesComponent }
+      { path: "attention-seekers", component: AttentionSeekersComponent, data: { animation: "attentionPage" } },
+      { path: "fading-entrances", component: FadingEntrancesComponent, data: { animation: "fadingPage" } }
     ])
 
   ],

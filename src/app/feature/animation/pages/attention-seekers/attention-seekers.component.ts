@@ -15,6 +15,8 @@ import { trigger, useAnimation, transition } from '@angular/animations';
   ]
 })
 export class AttentionSeekersComponent implements OnInit {
+
+  host: { "[@ROUTE_FADE_IN_ANIMATION]": ""; };
   pageHeader = "Attention Seekers";
   // animation states
   bounce = "off";
@@ -40,7 +42,7 @@ export class AttentionSeekersComponent implements OnInit {
     "swing",
     "tada",
     "wobble"
-  ]
+  ];
   constructor() { }
 
 
@@ -48,8 +50,7 @@ export class AttentionSeekersComponent implements OnInit {
   }
 
   toggleAnimation(animationName: string) {
-    console.log(this[animationName])
-    this[animationName] = this[animationName] === "off" ? "on" : "off"
+    this[animationName] = this[animationName] === "off" ? "on" : "off";
   }
 
 }
